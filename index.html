@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery maphilight documentation</title>
+	<script type="text/javascript" src="js/jquery1-6.js"></script>
+	<script type="text/javascript" src="js/plugin.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<h1>Check test tooth</h1>
+
+<img id="myimage" class="map" src="images/tooth.jpg" width="977" height="1390" usemap="#myimage">
+	<map  name="myimage">
+		<!-- the upper section -->
+		<!-- we will start from the right side -->
+		<area href="#" data-key="tooth1" title="t1" shape="poly" coords="170,541,186,547,216, 575,220,582,226,600,224,627,207,660,190,673,161,674,140,666,116,654,105,651,84,648,62,636,58,618,58,590,64,571,71,548,81,537,97,527,123,521">
+		<area href="#" data-key="tooth2" title="t2" shape="poly" coords="137,517,113,509,105,494,90,456,88,429,93,402,101,383,121,366,144,365,179,369,199,376,224,393,232,402,249,428,259,461,257,476,243,496,213,511,186,519">
+		<area href="#" data-key="tooth3" title="t3" shape="poly" coords="200,369,181,350,170,317,173,276,184,240,213,227,227,227,252,233,275,251,290,270,310,304,306,335,302,346,273,366,239,378,233,380">
+		<area href="#" data-key="tooth4" title="t4" shape="poly" coords="239,183,263,145,299,114,325,108,351,115,363,150,372,207,375,237,376,266,369,279,353,279,313,267,287,254,260,227,243,201,">
+		<area href="#" data-key="tooth5" title="t5" shape="poly" coords="358,113,357,99,365,83,416,52,443,53,464,66,472,93,476,137,474,177,458,199,447,211,424,207,374,142">
+		<!-- <area href="#" data-key="tooth6" title="t6" shape="poly" coords="352,119,362,138,366,153,376,264,362,280,334,278,291,253,250,213,238,185,247,165,308,107,334,111,347,114"> -->
+		<area href="#" data-key="tooth6" title="t6" shape="poly" coords="511,200,498,190,488,167,484,144,484,118,492,78,510,52,530,48,555,55,594,81,603,98,603,112,543,198,530,207,518,206"> 
+		<area href="#" data-key="tooth7" title="t7" shape="poly" coords="604,120,588,241,595,273,617,274,625,271,642,268,676,245,703,218,718,196,715,167,696,140,646,110,613,110">
+		<area href="#" data-key="tooth8" title="t8" shape="poly" coords="682,251,662,282,657,308,660,330,677,360,697,369,727,374,765,370,785,350,794,321,791,270,779,245,753,224,740,222,710,231">
+		<area href="#" data-key="tooth9" title="t9" shape="poly" coords="768,370,802,365,831,365,854,376,868,425,867,471,851,495,830,514,802,522,752,514,712,492,700,464,706,432,719,407,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+		<area href="#" data-key="tooth10" title="t10" shape="poly" coords="812,525,844,519,877,529,902,560,906,599,904,610,877,644,864,644,841,652,824,666,805,673,786,668,755,653,745,640,738,617,738,598,748,577,782,541,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+		
+	</map>
+</img>
+
+<script>
+	$( document ).ready(function() {
+		$('#myimage')
+        .mapster({
+            mapKey: 'data-key',
+			fill:true,
+			fillColor: '000000', // default for unselected images
+			stroke: true,
+			strokeColor: '000000',
+			strokeWidth: 2,
+			render_highlight: {
+				fillOpacity: 0.8
+			},
+			render_select: {
+				fillOpacity: 0.4,
+				fillColor: '000000'
+				// fillColor: 'FFFFFF'
+			},
+			areas:  [
+			{
+               key: "tooth1", 
+               selected: true,
+			   fill:true,
+			   fillColor:'000000',
+			   stroke: true,
+			   render_highlight: {
+					fillOpacity: 0.8
+				},
+				render_select: {
+					fillOpacity: 0.4,
+					fillColor: '000000'
+				}
+            },
+            { 
+               key: "tooth3",
+               selected: true,
+			   stroke: true,
+			   render_highlight: {
+					fillOpacity: 0.8
+				},
+				render_select: {
+					fillOpacity: 0.4,
+					fillColor: '000000'
+				}
+            },
+            { 
+               key: "tooth2",
+               selected: true,
+			   fill:true,
+			   fillColor:'0000FF',
+			   stroke: true,
+			   render_highlight: {
+					fillOpacity: 0.8
+				},
+				render_select: {
+					fillOpacity: 0.4,
+					fillColor: '0000FF'
+				}
+            },
+            { 
+               key: "tooth4",
+               selected: true,
+			   fillColor:'FFFF00'
+            },
+            { 
+               key: "tooth5",
+               selected: true,
+			   fillColor:'333333'
+            },
+			{ 
+               key: "tooth6",
+               selected: true,
+			   fillColor:'FFFF00'
+            },
+			{ 
+               key: "tooth7",
+               selected: true,
+			   fillColor:'FFFF00'
+            },
+			{ 
+               key: "tooth8",
+               selected: true,
+			   fillColor:'FFFF00'
+            },
+			{ 
+               key: "tooth9",
+               selected: true,
+			   fillColor:'FFFF00'
+            },
+			{ 
+               key: "tooth10",
+               selected: true,
+			   fillColor:'FFFF00'
+            }
+		]
+        });
+	});
+
+</script>
+
+</body>
+</html>
